@@ -15,7 +15,7 @@ function App() {
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']); // [state데이터, state데이터 변경함수]
 
   function 제목바꾸기(){
-      var newArray = 글제목;
+      var newArray = [...글제목]; // spread operator를 통해서 state를 deep copy해야함
       newArray[0] = '여자코트 추천';
       글제목변경( ['여자 코트 추천', '강남 우동 맛집', '파이썬 독학'] );
   }
@@ -24,7 +24,6 @@ function App() {
   // [state, state변경함수]
   // 따봉변경('대체할 데이터');
   let [따봉, 따봉변경] = useState(0);
-
 
   return (
     <>
@@ -60,8 +59,23 @@ function App() {
             <hr/>
         </div>
 
+        {/* 컴포넌트 사용시 원하는 곳에서 <함수명/> 하면 됨*/}
+        <Modal></Modal>
       </div>
     </>
+  )
+}
+
+// 컴포넌트명은 대문자로 시작해야 함.
+function Modal(){
+  return(
+    // return 안에 html 코드 작성해주면된다.
+    // 소괄호 안에는 div가 여러개 나란히 있을 수 없다.
+    <div className='modal'>
+          <h2>제목</h2>
+          <p>날짜</p>
+          <p>상세내용</p>
+    </div>
   )
 }
 
