@@ -60,7 +60,7 @@ function App() {
         </div>
 
         {/* 컴포넌트 사용시 원하는 곳에서 <함수명/> 하면 됨*/}
-        <Modal></Modal>
+        <Modal/>
       </div>
     </>
   )
