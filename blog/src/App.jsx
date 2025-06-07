@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -11,9 +12,9 @@ function App() {
   // let [a,b] = [10, 100] // a에는 10 b에는 100담는다.
   // state에 데이터 저장하는 이유 : state는 변경되면 새로고침 없이 HTML이 자동으로 재렌더링 된다.
   // 자주 바뀌는, 중요한 데이터는 변수말고 state에 저장해서 쓰자자
-  let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집']); // [state데이터, state데이터 변경함수]
+  let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']); // [state데이터, state데이터 변경함수]
 
-  
+
 
   return (
     <>
@@ -38,7 +39,7 @@ function App() {
             <hr/>
         </div>
         <div className='list'>
-            <h3> {posts} </h3>
+            <h3> {글제목[2]} </h3>
             <p>2월 17일 발행</p>
             <hr/>
         </div>
