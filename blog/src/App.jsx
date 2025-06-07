@@ -14,6 +14,10 @@ function App() {
   // 자주 바뀌는, 중요한 데이터는 변수말고 state에 저장해서 쓰자자
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']); // [state데이터, state데이터 변경함수]
 
+  // state 변경방법을 이용해서 state값을 변경하자
+  // [state, state변경함수]
+  // 따봉변경('대체할 데이터');
+  let [따봉, 따봉변경] = useState(0);
 
 
   return (
@@ -29,7 +33,7 @@ function App() {
         {/* <img src= {reactLogo} />  */}
         <div className='list'>
           {/* state : 변수 대신 쓰는 데이터 저장공간, useState()를 이용해 만들어야 함 */}
-            <h3> { 글제목[0] } </h3> 
+            <h3> { 글제목[0] } <span onClick={()=>{ 따봉변경( 따봉 + 1) }}>👍</span> {따봉} </h3> 
             <p>2월 17일 발행</p>
             <hr/>
         </div>
